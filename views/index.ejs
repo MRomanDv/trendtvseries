@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <!--Google-fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bungee&family=Heebo:wght@300&family=Jura:wght@300;700&family=Lilita+One&family=Monoton&family=Syncopate:wght@700&family=Teko:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <!--FONT-AWESOME--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <title>TV SERIES</title>
+</head>
+<body> 
+     <!--NAVBAR-->
+    <div class="navbar">
+        <div class="menu-bars"><i class="fa-solid fa-bars"></i></div>
+        <div class="title">
+            <h2>Trend <span>Tv series</span></h2>
+        </div>
+    </div>
+
+
+
+    <!--HEADER-->
+        <header>
+            <!--AUTH-CONTAINER-->
+        <div class="container-auth">
+            <% if (user) { %>
+                </i><div class="user"><i class="fa-solid fa-user-check"></i>Welcome <%= user.fullname %> </div>
+            <% } %> 
+            <div class="logout"><i class="fa-solid fa-user-minus"></i><a href="logout">Log out</a></div>        
+        </div>
+
+        <div class="about-arrow">
+            <div class="about"><p>About Us</p></div>
+            <div class="arrow"><a href="#about"><i class="fa-solid fa-sort-down"></i></a></div>
+        </div>
+        </header>
+
+
+
+    <!--ABOUT-->
+    <section class="aboutsection" id="about">
+        <div class="about-container">
+            <div class="logo"><h3>Trend <span>Tv series</span></h3></div>
+            <div class="about-text" id="about-text">In this blog you'll find the most popular streaming series and everything you want to know about your favorite show.</div>
+        </div>
+
+    </section>   
+    
+
+
+    <!--MAIN-CONTENT-GRID-->
+
+    <div class="main-content" id="main-content">
+    <div class="main-content-title">Trend Series of the Week <div class="line"></div></div>
+    
+    <div class="grid" id="grid">
+
+    </div> 
+
+    </div>
+   
+    <!--ICONIC SERIES-->
+    <div class="iconicseries">
+        <div class="iconicshows"><h3>HONORIFIC MENTION OF <span>ICONIC SHOWS</span></h3></div>
+    </div>
+
+    <!--cultseries-CAROUSSEL-->
+    <section class="iconic-section" id="about" aria-label="Newst Photo"> 
+        <div class="caroussel" data-carousel>
+            <button class="carousel-btn prev" data-carousel-button="prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <button class="carousel-btn next" data-carousel-button="next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="/public/imgs/is1.jpeg">
+                </li>
+                <li class="slide">
+                    <img src="/public/imgs/is2.jpeg">
+                </li>
+                <li class="slide">
+                    <img src="/public/imgs/is3.jpg">
+                </li>
+                <li class="slide">
+                    <img src="/public/imgs/is4.jpeg">
+                </li>
+                <li class="slide">
+                    <img src="/public/imgs/is5.jpeg">
+                </li>
+                <li class="slide">
+                    <img src="/public/imgs/is6.jpeg">
+                </li>
+            </ul>
+        </div>
+    </section> 
+    
+
+    <script src="/public/js/api.js"></script>
+    <script src="/public/js/index.js"></script>
+</body>
+</html>

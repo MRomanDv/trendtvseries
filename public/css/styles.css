@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(2, 2, 2);
+}
+
+header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('/public/imgs/headerbackgorund.jpeg');
+    background-position: center top;
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    
+    padding: 10px 20px;
+    display: flex; 
+    align-items: center;
+}
+.title {
+    width: max-content;
+    font-family: 'Alata', sans-serif;
+}
+
+.title h2 {
+    color: rgb(224, 209, 209);
+    font-size: 2rem;
+}
+.title h2 span{
+    color: rgb(163, 32, 32);
+
+}
+
+.logout a {
+    color: rgb(163, 32, 32);
+    text-decoration: none;
+}
+
+.menu-bars i {
+    font-size: 2rem;
+    color: rgb(163, 32, 32);
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/*AUTH CONTAINER*/
+.container-auth {
+    position: absolute;
+    width: fit-content;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    font-size: 1rem;
+    font-family: 'Jura', sans-serif;
+}
+.container-auth .user {
+    margin: 0 15px;
+    color: rgb(224, 209, 209);
+    border-right: 2px solid rgb(163, 32, 32);
+    padding-right: 10px;
+}
+.container-auth i {
+    font-size: 1rem;
+    color: rgb(163, 32, 32);
+    margin-right: 10px;
+}
+
+/*Arrow*/
+.about-arrow {
+    position: absolute;
+    width: fit-content;
+    bottom: 10%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-arrow .about {
+    font-size: 1.5rem;
+    color:rgb(224, 209, 209) ;
+    font-family: 'Alata', sans-serif;
+}
+
+.about-arrow .arrow i {
+    font-size: 2.5rem;
+    color: rgb(204, 77, 77);
+    cursor: pointer;
+    animation: arrow 500ms ease alternate-reverse infinite;
+}
+
+/*ABOUT*/
+
+.aboutsection {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('/public/imgs/background1.jpeg');
+    background-size: cover;
+    
+}
+
+.about-container {
+    width: 40%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0 100px 80px;
+    opacity: 0;
+    transition: 500ms ease;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.about-container .logo h3 {
+    font-size: 4rem;
+    color: rgb(219, 217, 217);
+    font-family: 'Alata', sans-serif;
+}
+
+.about-container .about-text {
+    font-size: 2.5rem;
+    color: rgb(219, 217, 217);
+    font-family: 'Jura', sans-serif;
+}
+
+/*MAIN-CONTENT-GRID*/
+
+.main-content {
+    width: 100vw;
+    height: fit-content;
+    background: rgb(233, 226, 226);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content .main-content-title {
+    width: 100%;
+    font-size: 4rem;
+    color: rgb(27, 26, 26);
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+    padding: 50px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.main-content-title:hover > .line {
+    animation: line 1s ease;
+}
+.line {
+    width: 700px;
+    border-bottom: 3px solid rgb(27, 26, 26);
+    padding-bottom: 10px;
+    transition: 1s ease;
+    
+}
+
+.grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    gap: 10px;
+}
+.grid-item {
+    width: 400px;
+    margin-bottom: 50px;
+}
+.grid-item .img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid-item .img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 1s ease-out;
+}
+
+.grid-item .img img:hover {
+    transform: scale(1.2);
+}
+.show-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.show-info .show-title {
+    font-size: 1.5rem;
+    font-family: 'Alata', sans-serif;
+}
+
+.overview {
+    padding: 5px 15px;
+    font-family: 'Jura', sans-serif;
+}
+
+/*ICONIC SHOWS*/
+.iconicseries {
+    width: 100vw;
+    padding: 50px;
+    background: rgb(24, 23, 23);
+}
+
+.iconicseries .iconicshows h3 {
+    font-size: 4rem;
+    color: rgb(219, 217, 217);
+    font-family: 'Alata', sans-serif;
+    text-align: center;
+}
+.iconicseries .iconicshows h3 span {
+    color: rgb(160, 41, 41);
+}
+
+.iconic-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    border-radius: 5px;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+.slide[data-active] {
+    opacity: 1;
+    -webkit-animation:opacity 800ms ease-in ;
+            animation:opacity 800ms ease-in ;
+}
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    border-radius: 5px;
+}
+.carousel-btn {
+    pointer-events: all;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    border: none;   
+    font-size: 4rem;
+    top: 50%;
+    background: transparent;
+    transform: translateY(-50%);
+    padding: 0 .5rem;
+    
+}
+.carousel-btn i {
+   
+    color: rgba(175, 27, 27, 0.6);
+}
+
+.carousel-btn i:active
+{
+    -webkit-animation: iconanimation 1s ease;
+            animation: iconanimation 1s ease;
+    color: rgb(202, 34, 34);
+
+}
+
+
+.next {
+    right: 0;
+}
+.credit p {
+    padding-top: 15px;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 1.5rem;
+}
+
+
+
+
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes line {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(10px);
+        color:rgb(211, 42, 42) ;
+    }
+    100% {
+        transform: translateY(0);
+        
+    }
+}
