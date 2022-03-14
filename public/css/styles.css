@@ -35,6 +35,8 @@ header {
     align-items: center;
 }
 .title {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     font-family: 'Alata', sans-serif;
 }
@@ -63,6 +65,8 @@ header {
 /*AUTH CONTAINER*/
 .container-auth {
     position: absolute;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     top: 20px;
     right: 20px;
@@ -91,9 +95,9 @@ header {
 /*Arrow*/
 .about-arrow {
     position: absolute;
-    width: fit-content;
+    width: 100%;
     bottom: 10%;
-    left: 50%;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,6 +158,8 @@ header {
 
 .main-content {
     width: 100vw;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     background: rgb(233, 226, 226);
     display: flex;
@@ -176,7 +182,8 @@ header {
 }
 
 .main-content-title:hover > .line {
-    animation: line 1s ease;
+    -webkit-animation: line 1s ease;
+            animation: line 1s ease;
 }
 .line {
     width: 700px;
@@ -193,11 +200,14 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
     gap: 10px;
+    place-content: center;
     
 }
 .grid-item {
     width: 400px;
     margin-bottom: 50px;
+    justify-self: center;
+    
 }
 .grid-item .img {
   width: 100%;
@@ -282,8 +292,10 @@ header {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center top;
+       object-position: center top;
     border-radius: 5px; 
 }
 .carousel-btn {
@@ -306,7 +318,8 @@ header {
 
 .carousel-btn i:active
 {
-    animation: rotate 1s ease-in-out;
+    -webkit-animation: rotate 1s ease-in-out;
+            animation: rotate 1s ease-in-out;
     color: rgb(202, 34, 34);
 
 }
@@ -371,12 +384,34 @@ header {
 
 
 
+@-webkit-keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
 @keyframes opacity {
     0%{
         opacity: 0;
     }
     100% {
         opacity: 1;
+    }
+}
+
+
+@-webkit-keyframes line {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -390,6 +425,17 @@ header {
     }
 }
 
+@-webkit-keyframes arrow {
+    0% {
+        transform: translateY(10px);
+        color:rgb(211, 42, 42) ;
+    }
+    100% {
+        transform: translateY(0);
+        
+    }
+}
+
 @keyframes arrow {
     0% {
         transform: translateY(10px);
@@ -398,6 +444,15 @@ header {
     100% {
         transform: translateY(0);
         
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
 
@@ -441,11 +496,25 @@ header {
     .nav-matchgame a {
         font-size: 1rem;
     }
+    
+    
 }
+
+@media screen and (max-width:900px) {
+    .grid {
+        place-items: center;
+    }
+}
+    
+
 
 @media screen and (max-width:800px) {
     .about-container .logo h3 {
         font-size: 3rem;
+    }
+    .about-container {
+        width: 100%;
+        padding: 0 20px 50px 20px;
     }
 
     .about-container .about-text {
@@ -496,7 +565,7 @@ header {
         font-size: 2rem;
     }
     .grid-item {
-        width: 300px;
+        width: 250px;
     }
     .iconic-container {
         padding-left: 20px;
@@ -506,5 +575,16 @@ header {
     }
     .iconic-container .about-text {
         font-size: .8rem;
+    }
+    .slide > img {
+        -o-object-position: center;
+           object-position: center;
+    }
+    .aboutsection {
+        background-position: center;
+    }
+    .title h2,
+    .menu-bars i {
+        font-size: 1.5rem;
     }
 }
