@@ -67,7 +67,7 @@ exports.login = async (req,res)=>{
                     res.render('login',{
                         alert:true,
                         alertTitle:"Successful log in",
-                        alertMessage:"¡WELCOME TO FILMS!",
+                        alertMessage:"¡WELCOME TO TREND TV SERIES!",
                         alertIcon:"success",
                         showConfirmButton:false,
                         timer:1500,

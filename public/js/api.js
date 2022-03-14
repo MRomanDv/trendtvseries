@@ -1,6 +1,7 @@
 const grid = document.getElementById('grid')
 
-const movies = async()=> {
+
+const movies = async()=> { 
     try {
         const res = await fetch('https://api.themoviedb.org/3/trending/tv/week?api_key=3467028a11a20878fb21506a8e70a76b')
         if(res.status == 200) {
@@ -52,3 +53,4 @@ const movies = async()=> {
 }
 
 movies()
+

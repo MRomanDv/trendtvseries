@@ -21,6 +21,8 @@ app.use(cookieParser())
 //ROUTER
 app.use('/', require('./routes/routes'))
 
+
+
 //ELIMINATE CACHE 
 app.use(function(req, res, next) {
     if (!req.user) 

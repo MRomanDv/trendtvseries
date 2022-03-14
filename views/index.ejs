@@ -12,7 +12,7 @@
     <title>TV SERIES</title>
 </head>
 <body> 
-     <!--NAVBAR-->
+     <!--LOGO AND MENU BUTTON-->
     <div class="navbar">
         <div class="menu-bars"><i class="fa-solid fa-bars"></i></div>
         <div class="title">
@@ -24,17 +24,25 @@
 
     <!--HEADER-->
         <header>
-            <!--AUTH-CONTAINER-->
+        <!--AUTH-CONTAINER-->
         <div class="container-auth">
             <% if (user) { %>
                 </i><div class="user"><i class="fa-solid fa-user-check"></i>Welcome <%= user.fullname %> </div>
-            <% } %> 
-            <div class="logout"><i class="fa-solid fa-user-minus"></i><a href="logout">Log out</a></div>        
+                <div class="logout"><i class="fa-solid fa-user-minus"></i><a href="logout">Log out</a></div>
+            <% }else { %>
+            <div class="user"><i class="fa-solid fa-user"></i><a href="/login">Log in</a></div>
+            
+            <% } %>
+                    
         </div>
 
         <div class="about-arrow">
             <div class="about"><p>About Us</p></div>
             <div class="arrow"><a href="#about"><i class="fa-solid fa-sort-down"></i></a></div>
+        </div>
+    <!--GO-TO-MATCH_GAME-->
+        <div class="nav-matchgame">
+            <a href="/matchgame">Play Tv Series Match Game!</a>
         </div>
         </header>
 
@@ -75,28 +83,58 @@
             <ul data-slides>
                 <li class="slide" data-active>
                     <img src="/public/imgs/is1.jpeg">
+                    <div class="iconic-container">
+                        <div class="logo"><h3>Ozark</h3></div>
+                        <div class="about-text" id="about-text">Ozark follows Marty Byrde, a financial advisor wrapped up in a money laundering scheme. When the scheme goes wrong, Marty relocates his family from Chicago to Missouri, where he must work to make amends to a Mexican drug cartel, setting up a larger operation in the Ozarks.</div>
+                    </div>
                 </li>
                 <li class="slide">
                     <img src="/public/imgs/is2.jpeg">
+                    <div class="iconic-container">
+                        <div class="logo"><h3>MadMan</h3></div>
+                        <div class="about-text" id="about-text">A man who dies in a car accident is reanimated by an eccentric doctor and given the name Frank Einstein. Though he wears a mask to hide his scarred face, the being is instilled with enhanced senses, powers, and abilities. Madman is a post-modernist reimagining of the Frankenstein tale, with a superhero twist.</div>
+                    </div>
                 </li>
                 <li class="slide">
                     <img src="/public/imgs/is3.jpg">
+                    <div class="iconic-container">
+                        <div class="logo"><h3>The Sopranos</h3></div>
+                        <div class="about-text" id="about-text">The story revolves around fictional New Jersey-based, Italian American mobster Tony Soprano (James Gandolfini). The series portrays the difficulties that he faces as he tries to balance his home life and his criminal organization and his failure of never having the makings of a Varsity Athelete.</div>
+                    </div>
                 </li>
                 <li class="slide">
                     <img src="/public/imgs/is4.jpeg">
+                    <div class="iconic-container">
+                        <div class="logo"><h3>Doctor Who</h3></div>
+                        <div class="about-text" id="about-text">Doctor Who is a British science fiction television programme broadcast by the BBC since 1963. The programme depicts the adventures of a Time Lord called the Doctor, an extraterrestrial being who appears to be human. The Doctor explores the universe in a time-travelling space ship called the TARDIS.</div>
+                    </div>
                 </li>
                 <li class="slide">
                     <img src="/public/imgs/is5.jpeg">
+                    <div class="iconic-container">
+                        <div class="logo"><h3>Twin Peaks</h3></div>
+                        <div class="about-text" id="about-text">Twin Peaks is an American television serial drama created by Mark Frost and David Lynch. The series initially follows the investigation – headed by FBI Special Agent Dale Cooper (Kyle MacLachlan) – of the brutal murder of a popular teenager and homecoming queen, Laura Palmer (Sheryl Lee).</div>
+                    </div>
                 </li>
                 <li class="slide">
                     <img src="/public/imgs/is6.jpeg">
+                    <div class="iconic-container">
+                        <div class="logo"><h3>Peaky Blinders</h3></div>
+                        <div class="about-text" id="about-text">Peaky Blinders is an epic centered on a gangster family of Irish-Romani origin set in Birmingham, England, starting in 1919, several months after the end of the First World War in November 1918. It centres on the Peaky Blinders gang and their ambitious, cunning boss Tommy Shelby (Murphy).</div>
+                    </div>
                 </li>
             </ul>
         </div>
     </section> 
     
 
+    <!--FOOTER-->
+    <footer>
+    </footer>
+    
+
     <script src="/public/js/api.js"></script>
     <script src="/public/js/index.js"></script>
+    <script src="/public/js/footer.js"></script>
 </body>
 </html>

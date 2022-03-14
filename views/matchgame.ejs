@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/matchgame.css">
+    <!--Google-fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bungee&family=Heebo:wght@300&family=Jura:wght@300;700&family=Lilita+One&family=Monoton&family=Syncopate:wght@700&family=Teko:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+    <!--FONT-AWESOME--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <title>Match game</title>
+</head>
+<body>
+     <!--LOGO AND MENU BUTTON-->
+     <div class="navbar">
+        <div class="title">
+            <h2>Trend <span>Tv series</span></h2>
+        </div>
+        <div class="homepage"><a href="/">Go back to Home page</a></div>
+    </div>
+    <section class="background">
+        <!--AUTH-CONTAINER-->
+        <div class="container-auth">
+            <% if (user) { %>
+                </i><div class="user"><i class="fa-solid fa-user-check"></i>Welcome <%= user.fullname %> </div>
+            <% } %> 
+            <div class="logout"><i class="fa-solid fa-user-minus"></i><a href="logout">Log out</a></div>        
+        </div>
+
+        <div class="match"></div>
+        
+        <div class="grid-area">
+            <div class="gridcontainer">
+            </div>
+        </div>
+
+    </section>
+
+    <footer></footer>
+    
+
+    <script src="/public/js/matchGame.js"></script>
+    <script src="/public/js/footer.js"></script>
+</body>
+</html>

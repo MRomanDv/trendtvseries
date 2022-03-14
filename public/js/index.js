@@ -1,4 +1,5 @@
 const aboutText = document.querySelector('.about-container') 
+const iconicShows = document.querySelector('.iconic-container')
 
 const loadDiv = (entry,observer)=>{
       entry.forEach((entrada)=>{
@@ -17,6 +18,7 @@ const observer = new IntersectionObserver(loadDiv,{
 })
 
 observer.observe(aboutText)
+observer.observe(iconicShows) 
 
 
 //CAROUSEL
@@ -42,4 +44,13 @@ buttons.forEach(button =>{
       slides.children[newIndex].dataset.active = true 
       delete activeslide.dataset.active
     })
+})
+
+
+//NAV TO MATCH GAME 
+const menuBtn = document.querySelector('.menu-bars')
+const matchGameMenu = document.querySelector('.nav-matchgame')
+
+menuBtn.addEventListener('click',()=>{
+  matchGameMenu.classList.toggle('visible-menu')
 })

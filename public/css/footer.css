@@ -1,0 +1,80 @@
+/*FOOTER*/
+footer {
+    position: relative;
+    width: 100vw;
+    background: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer-box {
+    width: 100%;
+    padding: 50px 0 100px 0;
+}
+footer h3 {
+    color: rgb(196, 191, 191);
+    font-family: 'Bungee', cursive;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    padding: 100px 0 20px 100px;
+    text-align: center;
+    border-bottom: 2px solid #fff;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(900px,1fr));
+    place-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.footer-content1 {
+    margin-bottom: 100px;
+}
+.footer-content1 ul li {
+    list-style: none;
+    font-size: 2.5vmin;
+    font-family: 'Bungee', cursive;
+    margin-right: 25px;
+    padding-left: 20px;
+    cursor: pointer;
+    transition: 500ms;
+    color: rgb(177, 173, 173);
+}
+.footer-content1 ul li:hover{
+    transform: scale(1.2);
+    color: rgb(192, 51, 41);
+}
+
+.footer-content1 ul {
+    display: flex;
+}
+
+.socialNet {
+    display: flex;
+    
+}
+.icon-socialNet {
+    margin-right: 25px;
+    font-size: 4vmin;
+    cursor: pointer;
+    color: rgb(226, 212, 212);
+    transition: 500ms ease-in;
+}
+
+.icon-socialNet:hover {
+    color: rgb(209, 47, 47);
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+    .footer-logo h3 {
+        padding-left: 0;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    
+}

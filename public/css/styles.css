@@ -1,3 +1,5 @@
+@import url('footer.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -79,6 +81,11 @@ header {
     font-size: 1rem;
     color: rgb(163, 32, 32);
     margin-right: 10px;
+}
+
+.user a {
+    text-decoration: none;
+    color:rgb(163, 32, 32) ;
 }
 
 /*Arrow*/
@@ -179,11 +186,14 @@ header {
     
 }
 
+/*GRID*/
+
 .grid {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
     gap: 10px;
+    
 }
 .grid-item {
     width: 400px;
@@ -272,11 +282,9 @@ header {
     display: block;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
-    border-radius: 5px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px; 
 }
 .carousel-btn {
     pointer-events: all;
@@ -298,8 +306,7 @@ header {
 
 .carousel-btn i:active
 {
-    -webkit-animation: iconanimation 1s ease;
-            animation: iconanimation 1s ease;
+    animation: rotate 1s ease-in-out;
     color: rgb(202, 34, 34);
 
 }
@@ -313,6 +320,53 @@ header {
     font-family: 'Nanum Gothic Coding', monospace;
     font-size: 1.5rem;
 }
+
+.iconic-container {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0 0 100px 150px;
+    transition: 500ms ease;
+}
+
+.iconic-container .logo h3 {
+    font-size: 4rem;
+    color: rgb(219, 217, 217);
+    font-family: 'Alata', sans-serif;
+}
+
+.iconic-container .about-text {
+    font-size: 2rem;
+    color: rgb(219, 217, 217);
+    font-family: 'Jura', sans-serif;
+}
+
+/*nav to MATCH GAME*/
+.nav-matchgame {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    padding: 20px;
+    
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: -800px;
+    transition: 1s ease-in;
+}
+
+.nav-matchgame a {
+    color:rgb(221, 211, 211) ;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: 'Alata', sans-serif;
+    transition: 500ms ease;
+}
+
+.nav-matchgame a:hover {
+    color: #962b2b;
+}
+.visible-menu {margin-left: 0;}
 
 
 
@@ -344,5 +398,113 @@ header {
     100% {
         transform: translateY(0);
         
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/*MEDIAQUERIES*/
+@media screen and (max-width:1200px) {
+    .about-container {
+        width: 50%;
+    }
+
+    .about-container .about-text {
+        font-size: 2rem;
+    }
+
+    .iconic-container {
+        padding-left: 100px;
+    }
+    .iconic-container .about-text {
+        font-size: 1.2rem;
+    }
+    .iconicseries .iconicshows h3 {
+        font-size: 5vw;
+    }
+    .container-auth {
+        flex-direction: column;
+    }
+    .container-auth .user {
+       margin: 0;
+       padding-bottom: 1rem;
+       border-right: none;
+    }
+    .nav-matchgame a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .about-container .logo h3 {
+        font-size: 3rem;
+    }
+
+    .about-container .about-text {
+        font-size: 1.5rem;
+    }
+    .main-content .main-content-title {
+        font-size: 3.5rem;
+    }
+    .line {
+        width: 60vw;
+    }
+    .iconic-container {
+        width: 80%;
+        padding-bottom: 20px;
+    }
+
+    .carousel-btn i {
+        font-size: 2rem;
+    }
+    .container-auth {
+        top: 10%;
+        left: 20px;
+    }
+    .about-arrow .about p,
+    .about-arrow .about i {
+        font-size: 1rem;
+
+    }
+}
+
+@media screen and (max-height:700px) {
+    .about-container .logo h3{
+        font-size: 2rem;
+    }
+    .about-container .about-text {
+        font-size: 1rem;
+    }
+
+    .about-container {
+        width: 100%;
+        padding: 0 20px 50px 20px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .main-content .main-content-title{
+        font-size: 2rem;
+    }
+    .grid-item {
+        width: 300px;
+    }
+    .iconic-container {
+        padding-left: 20px;
+    }
+    .iconic-container .logo h3{
+        font-size: 2rem;
+    }
+    .iconic-container .about-text {
+        font-size: .8rem;
     }
 }
